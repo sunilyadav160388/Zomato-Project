@@ -26,7 +26,7 @@ The final model is a **TF-IDF + Logistic Regression** pipeline that classifies a
 ## 📁 Submission Package Directory Structure
 
 Zomato_Project_Package/
-│
+
 ├── README.md                                        # Project overview and documentation (this file)
 
 ├── Zomato_Restaurant_ML_Project_Report.pdf          # Formal 14-page project report
@@ -35,46 +35,74 @@ Zomato_Project_Package/
 
 ├── Zomato_Restaurant_ML_Presentation.pptx           # 14-slide 16:9 presentation with speaker notes
 
-│
+
 ├── data/                                            # Input datasets
 
-│   ├── Zomato_Restaurant_names_and_Metadata.csv     # 105 restaurants: cost, cuisines, collections, timings
+├── Zomato_Restaurant_names_and_Metadata.csv     # 105 restaurants: cost, cuisines, collections, timings
 
-│   └── Zomato_Restaurant_reviews.csv                # 10,000 customer reviews
-│
+└── Zomato_Restaurant_reviews.csv                # 10,000 customer reviews
+
 ├── model/
 │   └── zomato_sentiment_model.joblib                # Saved final pipeline (TF-IDF + chi-square + Logistic Regression)
 
-│
+
 └── charts/                                          # 29 high-resolution chart exports (PNG)
     ├── 00_missing_values_heatmap.png
+    
     ├── 01_rating_distribution.png
+    
     ├── 02_cost_for_two_distribution.png
+    
     ├── 03_top_10_cuisines.png
+    
     ├── 04_reviews_over_time.png
+    
     ├── 05_review_length_distribution.png
+    
     ├── 06_top_bottom_restaurants.png
+    
     ├── 07_cost_vs_average_rating.png
+    
     ├── 08_review_length_by_rating.png
+    
     ├── 09_pictures_vs_rating.png
+    
     ├── 10_reviews_by_hour.png
+    
     ├── 11_rating_by_weekday.png
+    
     ├── 12_rating_by_cuisine.png
+    
     ├── 13_reviewer_followers_vs_rating.png
+    
     ├── 14_correlation_heatmap.png
+    
     ├── 15_pair_plot.png
+    
     ├── 16_outlier_capping.png
+    
     ├── 17_word_clouds.png
+    
     ├── 18_svd_2d_reviews.png
+    
     ├── 19_lr_base_metrics.png
+    
     ├── 20_lr_tuned_metrics.png
+    
     ├── 21_nb_base_metrics.png
+    
     ├── 22_nb_tuned_metrics.png
+    
     ├── 23_rf_base_metrics.png
+    
     ├── 24_rf_tuned_metrics.png
+    
     ├── 25_model_comparison.png
+    
     ├── 26_kmeans_elbow_silhouette.png
+    
     ├── 27_restaurant_clusters_pca.png
+    
     └── 28_top_words_coefficients.png
 
 ---
