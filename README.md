@@ -28,16 +28,23 @@ The final model is a **TF-IDF + Logistic Regression** pipeline that classifies a
 Zomato_Project_Package/
 │
 ├── README.md                                        # Project overview and documentation (this file)
+
 ├── Zomato_Restaurant_ML_Project_Report.pdf          # Formal 14-page project report
+
 ├── Zomato_Restaurant_ML_Capstone.ipynb              # Fully executed Jupyter Notebook (template format, 15+ charts, 3 models)
+
 ├── Zomato_Restaurant_ML_Presentation.pptx           # 14-slide 16:9 presentation with speaker notes
+
 │
 ├── data/                                            # Input datasets
+
 │   ├── Zomato_Restaurant_names_and_Metadata.csv     # 105 restaurants: cost, cuisines, collections, timings
+
 │   └── Zomato_Restaurant_reviews.csv                # 10,000 customer reviews
 │
 ├── model/
 │   └── zomato_sentiment_model.joblib                # Saved final pipeline (TF-IDF + chi-square + Logistic Regression)
+
 │
 └── charts/                                          # 29 high-resolution chart exports (PNG)
     ├── 00_missing_values_heatmap.png
@@ -69,25 +76,34 @@ Zomato_Project_Package/
     ├── 26_kmeans_elbow_silhouette.png
     ├── 27_restaurant_clusters_pca.png
     └── 28_top_words_coefficients.png
-```
 
 ---
 
 ## 🎯 Key Project Highlights & Findings
 
 1. **Polarised Satisfaction:** About 63% of reviews are 4-5 stars (38% are 5 stars), yet 17% are 1 star and only 12% are 3 stars. Customers either love or dislike the experience, so the 1-star group should be investigated first.
+
 2. **Quality Range:** Average restaurant rating ranges from **2.40** (Hotel Zara Hi-Fi) to **4.88** (AB's - Absolute Barbecues). Top performers are barbecue, buffet and sit-down places.
+
 3. **Price and Photos Matter:** Restaurants above the median cost average **3.78** stars vs **3.42** for cheaper ones, and reviews with pictures average **3.86** vs **3.53** without. Both differences are statistically significant (Mann-Whitney U, p < 0.01).
+
 4. **Cuisine Effect:** Mediterranean (4.55), European (4.38) and American (3.93) are best rated, while Fast Food (3.32), Andhra (3.36) and Biryani (3.38) are lowest, even though they are high-demand cuisines.
+
 5. **Text Is the Signal:** Numeric features correlate only weakly with rating (maximum 0.14), so an NLP model on the review text is needed. Weekend vs weekday has no significant effect on sentiment (chi-square p = 0.26).
+
 6. **Six Restaurant Segments:** K-Means (k = 6, silhouette 0.287) separates star performers (cost about INR 1,340, rating 4.65) from low-price, low-quality outlets (rating 2.86, only 40% positive reviews).
 
 ### Model Performance (test set)
 
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
+
 |---|---|---|---|---|---|
+
 | **Logistic Regression (tuned) - FINAL** | **0.8674** | **0.8966** | **0.8923** | **0.8945** | **0.9424** |
+
 | Naive Bayes (tuned) | 0.8584 | 0.8958 | 0.8772 | 0.8864 | 0.9356 |
+
+
 | Random Forest (tuned) | 0.8594 | 0.8817 | 0.8971 | 0.8893 | 0.9352 |
 
 The final model was selected by the best cross-validated F1 (0.912) and is fully explainable: *awesome, best, love, amazing, delicious* push a review towards Positive, while *not, worst, bad, disappointing, tasteless* push it towards Negative.
@@ -97,11 +113,17 @@ The final model was selected by the best cross-validated F1 (0.912) and is fully
 ## 🛠️ Tech Stack & Libraries Used
 
 - **Language:** Python 3.10+
+
 - **Data Manipulation:** pandas, numpy
+
 - **Data Visualization:** matplotlib, seaborn, wordcloud
+
 - **Statistics:** SciPy (Mann-Whitney U, chi-square)
+
 - **NLP & Machine Learning:** scikit-learn (TF-IDF, Logistic Regression, Naive Bayes, Random Forest, K-Means, PCA, TruncatedSVD), NLTK (optional)
+
 - **Model Persistence:** joblib
+
 - **Environment:** Jupyter Notebook / Google Colab
 
 ---
