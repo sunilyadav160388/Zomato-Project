@@ -3,8 +3,10 @@
 **Capstone Machine Learning Project • Submission Package**
 
 **Candidate Name:** Sunil Yadav
+
 **Organization:** Labmentix
 **Project Type:** EDA + Classification (NLP Sentiment Analysis) + Unsupervised Learning (Clustering)
+
 **Contribution:** Individual
 
 **GitHub Link:** https://github.com/sunilyadav160388/Zomato-Project
